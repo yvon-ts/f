@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <style type="text/css">
+    .box{
+      width: 100%;
+      background-color: #fff;
+    }
+    .cusBar{
+      height: 55px;
+    }
+    .cus-title{
+      font-size: 1.5rem;
+      line-height: 50px;
+      font-weight: bold;
+    }
+    .cus-title i{
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .form-box label{
+      line-height: 30px;
+      color: grey;
+    }
+    </style>
+    <title>遠智證券 - 客戶資料管理系統</title>
+</head>
+<body>
+    <header class="sticky-top">
+        <div class="container-fluid d-flex justify-content-between">
+        <h1 class="logo"><a href="index.html">客戶資料管理系統</a></h1>
+    </div>
+    </header>
+    <!-- Navbar -->
+        <div class="row g-0">
+        <nav class="navbar navbar-expand-md col-lg-2 col-md-3 pt-md-0 navbar-dark bg-primary">
+            <!-- <div class="container-fluid h-100"> -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sideBar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse h-100" id="sideBar">
+                <ul class="navbar-nav mb-2 mb-lg-0 mt-0 w-100 h-100 d-flex flex-column justify-content-md-start">
+                  <li class="nav-item text-center">
+                    <a class="nav-link" href="#"><i class="fas fa-user-alt"></i>客戶資料</a>
+                  </li>
+                </ul>
+              </div>
+            <!-- </div> -->
+          </nav>
+          <!-- Main content -->
+          <main class="col-lg-10 col-md-9">
+            <div class="container">
+              <div class="box rounded-semi mt-5 ps-5 pe-5 pt-3 pb-3">
+                <div class="cusBar d-flex justify-content-between align-items-end border-bottom border-2 border-danger mb-3">
+                  <span class="cus-title ms-3"><i class="fas fa-user-alt me-3"></i>王小明</span>
+                  <ul class="cus-info d-flex justify-content-end">
+                    <li class="ms-2"><span class="tag text-light pt-1 pb-1 ps-2 pe-2 rounded bg-warning">專投戶</span></li>
+                    <li class="ms-2"><span class="tag text-light pt-1 pb-1 ps-2 pe-2 rounded bg-danger">高風險</span></li>
+                    <li class="ms-2"><span class="tag text-light pt-1 pb-1 ps-2 pe-2 rounded bg-primary">員工戶</span></li>
+                    <li class="ms-3"><span class="title text-primary fw-bold">JNG帳號：</span>JNG106537</li>
+                    <li class="ms-3"><span class="title text-primary fw-bold">負責業務：</span>C0000 業務員</li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 ms-3 mb-3"><span class="title text-primary fw-bold">聯絡資訊</span></div>
+                </div>
+                <form action="" class="form-box row ms-5 me-5">
+                  <div class="col-md-2 border-top row-style"><label for="">市話號碼</label></div>
+                  <div class="col-md-4 border-top row-style relative"><input type="text" class="w-100 input-style absolute-right" value="0212345678"></div>
+                  <div class="col-md-2 border-top row-style"><label for="">手機號碼</label></div>
+                  <div class="col-md-4 border-top row-style relative"><input type="text" class="w-100 input-style absolute-right" value="0212345678"></div>
+                  <div class="col-md-2 row-style"><label for="">電子信箱</label></div>
+                  <div class="col-md-4 row-style relative"><input type="email" class="w-100 input-style absolute-right" value="email@gmail.com"></div>
+                  <div class="col-md-4 row-style"><label for="">戶籍地址與通訊地址不同</label></div>
+                  <div class="col-md-2 row-style relative">
+                    <div class="onoffswitch absolute-right">
+                      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0">
+                      <label class="onoffswitch-label" for="myonoffswitch">
+                          <span class="onoffswitch-inner"></span>
+                          <span class="onoffswitch-switch"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-2 row-style"><label for="">戶籍地址</label></div>
+                  <div class="col-md-10 row-style relative">
+                    <label class="me-1"><input type="checkbox">海外</label>
+                    <input type="text" class="input-style" value="12345" size="7">
+                    <input type="text" class="input-style absolute-right" size="60" value="台北市信義區信義路五段7號51樓"></div>
+                    <div class="col-md-2 row-style"><label for="">通訊地址</label></div>
+                    <div class="col-md-10 row-style relative">
+                      <label class="me-1"><input type="checkbox">海外</label>
+                      <input type="text" class="input-style" value="12345" size="7">
+                      <input type="text" class="input-style absolute-right" size="60" value="台北市信義區信義路五段7號51樓"></div>
+                </form>
+
+        </div>
+        </div>
+          </main>
+        </div>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
