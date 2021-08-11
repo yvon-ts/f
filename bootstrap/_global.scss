@@ -32,12 +32,6 @@ header{
 .wealth{
     line-height: 58px;
 }
-.navbar{
-    @media (min-width: 768px){
-        height: 100vh;
-    }
-
-}
 .nav-item{
     &:hover{
         background-color: lighten($primary, 20%);

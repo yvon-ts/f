@@ -1952,7 +1952,6 @@ progress {
 .form-control {
   display: block;
   width: 100%;
-  padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -10267,12 +10266,6 @@ header {
 
 .wealth {
   line-height: 58px;
-}
-
-@media (min-width: 768px) {
-  .navbar {
-    height: 100vh;
-  }
 }
 
 .nav-item:hover {
