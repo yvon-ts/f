@@ -39,10 +39,38 @@ header{
 }
 .nav-link{
     line-height: 3em;
+    display: block;
+    text-align: center;
+    
     i{
         margin-right: 1em;
     }
 }
+#sideBar{
+    @media (max-width: 767px){
+        position: fixed;
+    }
+}
+.row-style{
+    border-bottom: 1px solid #eee;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+.input-style{
+    padding-left: .25rem;
+    background-color: #eee;
+    border-radius: .3rem;
+    border: 2px solid #eee;
+    outline: none;
+}
+.absolute-right{
+    position: absolute;
+    right: 0;
+}
+.relative{
+    position: relative;
+}
+
 // switch-btn settings
 .onoffswitch {
     position: relative; width: 70px;
@@ -91,23 +119,4 @@ header{
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px; 
     background: #fff;
-}
-.row-style{
-    border-bottom: 1px solid #eee;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-}
-.input-style{
-    padding-left: .25rem;
-    background-color: #eee;
-    border-radius: .3rem;
-    border: 2px solid #eee;
-    outline: none;
-}
-.absolute-right{
-    position: absolute;
-    right: 0;
-}
-.relative{
-    position: relative;
 }
