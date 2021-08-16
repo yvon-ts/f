@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="datepicker/css/bootstrap-datepicker.min.css">
+    <style type="text/css">
+    .box{
+      width: 100%;
+      background-color: #fff;
+    }
+    .cusBar{
+      height: 55px;
+    }
+    .cus-title{
+      font-size: 1.5rem;
+      line-height: 50px;
+      font-weight: bold;
+    }
+    .cus-title i{
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .form-box label{
+      line-height: 30px;
+      color: grey;
+    }
+    select{
+      background-color: #eee;
+      border: none;
+      outline: none;
+      height: 30px;
+      border: 2px solid #eee;
+      border-radius: .3rem;
+    }
+    .addr{
+      position: absolute;
+      right: 6rem;
+    }
+    #left {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+    </style>
+    <title>遠智證券 - 客戶資料管理系統</title>
+</head>
+<body>
+  <header class="sticky-top">
+    <div class="container-fluid d-flex justify-content-between">
+    <h1 class="logo"><a href="index.html">客戶資料管理系統</a></h1>
+</div>
+</header>
+<!-- Navbar -->
+  <div class="container-fluid">
+    <div class="row">
+        <nav class="col-lg-2 col-md-3 bg-primary navbar-dark py-2 p-0" id="left">
+          <!-- workable -->
+          <ul class="d-flex flex-wrap justify-content-center mt-5 p-0">
+          <li class="w-100 mt-2"><a class="nav-link" href="demo_cusBasic.html" style="color:#fff"><i class="fas fa-user-alt"></i>基本資料</a></li>
+          <li class="w-100"><a class="nav-link" href="demo_cusAcc.html" style="color:#fff"><i class="fas fa-user-alt"></i>帳戶資料</a></li>
+          <li class="w-100"><a class="nav-link" href="#" style="color:#fff"><i class="fas fa-user-alt"></i>功能名稱1</a></li>
+          <li class="w-100"><a class="nav-link" href="#" style="color:#fff"><i class="fas fa-user-alt"></i>功能名稱2</a></li>
+          </ul>
+        </nav>
+  <!-- Main area -->
+        <main class="col-lg-10 col-md-9 offset-3 offset-md-2 py-2 mb-5">
+          <div class="container">
+            <div class="box rounded-semi mt-4 ps-5 pe-5 pt-3 pb-3">
+              <!-- cusBar start -->
+              <div class="cusBar d-flex justify-content-between align-items-end border-bottom border-2 border-danger">
+                <span class="cus-title ms-3"><i class="fas fa-user-alt me-3"></i>王小明</span>
+                <ul class="cus-info d-flex justify-content-end">
+                  <li class="ms-2"><span class="tag text-light pt-1 pb-1 ps-2 pe-2 rounded bg-warning">專投戶</span></li>
+                  <li class="ms-2"><span class="tag text-light pt-1 pb-1 ps-2 pe-2 rounded bg-danger">高風險</span></li>
+                  <li class="ms-2"><span class="tag text-light pt-1 pb-1 ps-2 pe-2 rounded bg-primary">員工戶</span></li>
+                  <li class="ms-3"><span class="title text-primary fw-bold">JNG帳號：</span>JNG106537</li>
+                  <li class="ms-3"><span class="title text-primary fw-bold">負責業務：</span>C0000 業務員</li>
+                </ul>
+              </div>
+              <!-- Data group start -->
+              <form action="" class="form-box pb-5">
+                <div class="row"><div class="col-md-12 ms-3 mt-4 mb-3"><span class="title text-primary fw-bold">聯絡資訊</span></div></div>
+                <div class="row ms-4 me-4">
+                <div class="col-md-3 border-top row-style"><label for="">市話號碼</label></div>
+                <div class="col-md-3 border-top row-style relative"><input type="text" class="w-100 input-style absolute-right" value="0212345678"></div>
+                <div class="col-md-3 border-top row-style"><label for="">手機號碼</label></div>
+                <div class="col-md-3 border-top row-style relative"><input type="text" class="w-100 input-style absolute-right" value="0912345678"></div>
+                <div class="col-md-3 row-style"><label for="">電子信箱</label></div>
+                <div class="col-md-3 row-style relative"><input type="email" class="w-100 input-style absolute-right" value="email@gmail.com"></div>
+                <div class="col-md-4 row-style"><label for="">戶籍地址與通訊地址不同</label></div>
+                <div class="col-md-2 row-style pe-0">
+                  <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="auth-address" tabindex="0">
+                    <label class="onoffswitch-label" for="auth-address">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-2 row-style"><label for="">戶籍地址</label></div>
+                <div class="col-md-3 row-style relative">
+                  <label class="me-1 addr"><input type="checkbox">海外</label>
+                  <input type="text" class="input-style absolute-right me-2" value="12345" size="7">
+                </div>
+                <div class="col-md-7 row-style relative">
+                  <input type="text" class="w-100 input-style absolute-right"value="台北市信義區信義路五段7號51樓"></div>
+                  <div class="col-md-2 row-style"><label for="">通訊地址</label></div>
+                  <div class="col-md-3 row-style relative">
+                    <label class="me-1 addr"><input type="checkbox">海外</label>
+                    <input type="text" class="input-style absolute-right me-2" value="12345" size="7"></div>
+                  <div class="col-md-7 row-style relative">
+                    <input type="text" class="w-100 input-style absolute-right" value="台北市信義區信義路五段7號51樓"></div>
+                </div>
+                <div class="row"><div class="col-md-12 ms-3 mt-4 mb-3"><span class="title text-primary fw-bold">遞送方式</span></div></div>
+                <div class="row ms-4 me-4">
+                  <div class="col-md-3 border-top row-style"><label for="">買賣報告書遞送方式</label></div>
+                  <div class="col-md-3 border-top row-style relative">
+                    <select name="" id="" class="w-100 absolute-right">
+                      <option value="電話告知">電話告知</option>
+                      <option value="郵寄通訊地">郵寄通訊地</option>
+                      <option value="email">email</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3 border-top row-style"><label for="">對帳單遞送方式</label></div>
+                  <div class="col-md-3 border-top row-style relative">
+                    <select name="" id="" class="w-100 absolute-right">
+                      <option value="電話告知">電話告知</option>
+                      <option value="email">email</option>
+                    </select>
+                  </div>
+                </div>
+                  <div class="row"><div class="col-md-12 ms-3 mt-4 mb-3"><span class="title text-primary fw-bold">個人資訊</span></div></div>
+                  <div class="row ms-4 me-4">
+                    <div class="col-md-3 border-top row-style"><label for="">中文姓名</label></div>
+                    <div class="col-md-3 border-top row-style relative"><input type="text" class="w-100 input-style absolute-right" value="王小明"></div>
+                    <div class="col-md-3 border-top row-style"><label for="">英文姓名</label></div>
+                    <div class="col-md-3 border-top row-style relative"><input type="text" class="w-100 input-style absolute-right" value="Wang Hsiao Ming"></div>
+                    <div class="col-md-3 row-style"><label for="">性別</label></div>
+                    <div class="col-md-3 row-style relative">
+                      <select name="" id="" class="w-100 absolute-right">
+                        <option value="男">男</option>
+                        <option value="女" selected>女</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3 row-style"><label for="">生日</label></div>
+                    <div class="col-md-3 row-style relative">
+                      <!-- Datepicker starts -->
+                        <div class="input-group date absolute-right" id="date">
+                          <input type="text" id="months" class="form-control" value="2021/08/01">
+                          <span class="input-group-addon input-group-text">
+                            <i class="fas fa-calendar"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- End of Datepicker -->
+                      <div class="col-md-3 row-style"><label for="">身分證或居留證</label></div>
+                      <div class="col-md-3 row-style relative"><input type="text" class="w-100 input-style absolute-right" value="A123456789"></div>
+                      <div class="col-md-3 row-style"><label for="">居留證有效期限</label></div>
+                      <div class="col-md-3 row-style relative">
+                      <!-- Datepicker starts -->
+                        <div class="input-group date absolute-right" id="date">
+                          <input type="text" id="months" class="form-control" value="">
+                          <span class="input-group-addon input-group-text">
+                            <i class="fas fa-calendar"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- End of Datepicker -->
+                      <div class="col-md-3 row-style"><label for="">教育程度</label></div>
+                      <div class="col-md-3 row-style relative">
+                        <select name="" id="" class="w-100 absolute-right">
+                          <option value="國中以下">國中以下</option>
+                          <option value="高中/職">高中/職</option>
+                          <option value="大學/大專">大學/大專</option>
+                          <option value="研究所(含)以上" selected>研究所(含)以上</option>
+                        </select>
+                      </div>
+                      <div class="col-md-3 row-style"><label for="">國籍</label></div>
+                      <div class="col-md-3 row-style relative">
+                        <input list="nation" class="w-100 input-style absolute-right">
+                        <datalist id="nation" class="">
+                          <option value="AS 美屬薩摩亞"></option>
+                          <option value="BA 波士尼亞"></option>
+                          <option value="TW 中華民國"></option>
+                          <option value="ZA 南非共和國"></option>
+                        </datalist>
+                      </div>
+                      <div class="col-md-4 row-style"><label for="">領有重大傷病證明</label></div>
+                      <div class="col-md-2 row-style pe-0">
+                        <div class="onoffswitch">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="auth-illness" tabindex="0">
+                          <label class="onoffswitch-label" for="auth-illness">
+                              <span class="onoffswitch-inner"></span>
+                              <span class="onoffswitch-switch"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-3 row-style"></div>
+                      <div class="col-md-3 row-style"></div>
+                  </div>
+                  <div class="row"><div class="col-md-12 ms-3 mt-4 mb-3"><span class="title text-primary fw-bold">職業資訊</span></div></div>
+                    <div class="row ms-4 me-4">
+                      <div class="col-md-3 border-top row-style"><label for="">行業</label></div>
+                      <div class="col-md-3 border-top row-style relative">
+                        <input list="industry" class="w-100 input-style absolute-right">
+                        <datalist id="industry" class="">
+                          <option value="A 農林漁牧業"></option>
+                          <option value="B 礦業及土石採取業"></option>
+                          <option value="K 金融及保險業"></option>
+                          <option value="S 其他服務業"></option>
+                        </datalist>
+                      </div>
+                      <div class="col-md-3 border-top row-style"><label for="">公司名稱</label></div>
+                      <div class="col-md-3 border-top row-style relative"><input type="text" class="w-100 input-style absolute-right" value="遠智證券股份有限公司"></div>
+                      <div class="col-md-3 border-top row-style"><label for="">職稱</label></div>
+                      <div class="col-md-3 border-top row-style relative">
+                        <select name="" id="" class="w-100 absolute-right">
+                          <option value="一般職員">一般職員</option>
+                          <option value="中高階主管">中高階主管</option>
+                          <option value="負責人">負責人</option>
+                        </select>
+                      </div>
+                      <div class="col-md-3 border-top row-style"><label for="">公司電話</label></div>
+                      <div class="col-md-3 border-top row-style relative"><input type="text" class="w-100 input-style absolute-right" value="0212345678"></div>
+                      <div class="col-md-2 row-style"><label for="">公司地址</label></div>
+                        <div class="col-md-3 row-style relative">
+                          <label class="me-1 addr"><input type="checkbox">海外</label>
+                          <input type="text" class="input-style absolute-right me-2" value="12345" size="7"></div>
+                        <div class="col-md-7 row-style relative">
+                          <input type="text" class="w-100 input-style absolute-right" value="台北市信義區信義路五段7號51樓"></div>
+                      </div>
+                      <div class="row"><div class="col-md-12 ms-3 mt-4 mb-3"><span class="title text-primary fw-bold">緊急聯絡人</span></div></div>
+                        <div class="row ms-4 me-4">
+                          <div class="col-md-3 border-top row-style"><label for="">姓名</label></div>
+                          <div class="col-md-3 border-top row-style relative"><input type="text" class="w-100 input-style absolute-right" value="王大明"></div>
+                          <div class="col-md-3 border-top row-style"><label for="">聯絡電話</label></div>
+                <div class="col-md-3 border-top row-style relative"><input type="text" class="w-100 input-style absolute-right" value="0212345678"></div>
+                          <div class="col-md-3 border-top row-style"><label for="">關係</label></div>
+                          <div class="col-md-3 border-top row-style relative">
+                            <select name="" id="" class="w-100 absolute-right">
+                              <option value="配偶">配偶</option>
+                              <option value="子女">子女</option>
+                              <option value="父母" selected>父母</option>
+                              <option value="兄弟姊妹">兄弟姊妹</option>
+                              <option value="其他">其他</option>
+                            </select>
+                          </div>
+                          <div class="col-md-3 row-style"></div>
+                          <div class="col-md-3 row-style"></div>
+                        </div>
+                      </div>
+                    </div>                    
+                  </form>
+              <!-- Data group end -->
+        </div>
+      </div>
+        </main>
+    </div>
+</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="datepicker/js/bootstrap-datepicker.js"></script>
+<script src="datepicker/js/bootstrap-datepicker.zh-TW.min.js"></script>
+<script>
+  $(function(){
+    $('#date').datepicker({
+      startView: 0,
+      minView: 0,
+      autoclose: 'true',
+      format: 'yyyy/mm/dd',
+      language: 'zh-TW'
+    });
+  });
+</script>
+</body>
+</html>

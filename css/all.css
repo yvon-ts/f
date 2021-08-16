@@ -10278,6 +10278,10 @@ header {
   text-align: center;
 }
 
+.nav-link:hover {
+  background: #3586fd;
+}
+
 .nav-link i {
   margin-right: 1em;
 }
@@ -10314,6 +10318,7 @@ header {
 .onoffswitch {
   position: relative;
   width: 70px;
+  float: right !important;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -10367,6 +10372,19 @@ header {
   background-color: #FFFFFF;
   color: #999;
   text-align: right;
+}
+
+.onoffswitch-history:after {
+  content: "History";
+  padding-left: 10px;
+  background-color: #FFFFFF;
+  color: #999;
+  text-align: right;
+}
+
+.onoffswitch-history:after:hover:after {
+  background-color: #0253cb;
+  color: #999;
 }
 
 .onoffswitch-switch {

@@ -41,7 +41,9 @@ header{
     line-height: 3em;
     display: block;
     text-align: center;
-    
+    &:hover{
+        background: lighten($primary, 20%);
+    }
     i{
         margin-right: 1em;
     }
@@ -74,6 +76,7 @@ header{
 // switch-btn settings
 .onoffswitch {
     position: relative; width: 70px;
+    float: right !important; // 20210813 yvon TBD
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
 .onoffswitch-checkbox {
@@ -104,6 +107,15 @@ header{
     padding-right: 10px;
     background-color: #FFFFFF; color: #999;
     text-align: right;
+}
+.onoffswitch-history:after {
+    content: "History";
+    padding-left: 10px;
+    background-color: #FFFFFF; color: #999;
+    text-align: right;
+    &:hover:after{
+    background-color: $primary; color: #999;
+    }
 }
 .onoffswitch-switch {
     display: block; width: 18px; height: 18px; margin: 6px;
