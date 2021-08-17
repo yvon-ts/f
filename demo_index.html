@@ -55,9 +55,58 @@
         <h1 class="logo"><a href="index.html">客戶資料管理系統</a></h1>
     </div>
     </header>
-    <!-- Navbar -->
-        <div class="row g-0">
-          <nav class="navbar navbar-expand-md col-lg-2 col-md-3 pt-md-0 navbar-dark bg-primary">
+        <div class="row wrapper min-vh-100 flex-column flex-sm-row g-0">
+          <aside class="col-12 col-sm-2 p-0 bg-dark flex-shrink-1">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark align-items-start flex-sm-column flex-row">
+                <a class="navbar-brand" href="#"><i class="fa fa-bullseye fa-fw"></i> Brand</a>
+                <a href class="navbar-toggler" data-toggle="collapse" data-target="test">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <div class="collapse navbar-collapse" id="test">
+                    <ul class="flex-column navbar-nav w-100 justify-content-between">
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#"><i class="fa fa-heart-o fa-fw"></i> <span class="">Link</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0 dropdown-toggle text-nowrap" href="#m1" data-parent="#navbar1" data-toggle="collapse" data-target="#m1" aria-expanded="false">
+                                <i class="fa fa-address-card-o fa-fw"></i> <span class=""> Link</span>
+                            </a>
+                            <div class="collapse" id="m1">
+                                <ul class="flex-column nav">
+                                    <a class="nav-link px-0 text-truncate" href="#">Sub</a>
+                                    <a class="nav-link px-0 text-truncate" href="#">Sub longer</a>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#"><i class="fa fa-book fa-fw"></i> <span class="">Link</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pl-0" href="#"><i class="fa fa-heart fa-fw"></i> <span class="">Link</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+            <!-- <nav class="navbar navbar-dark d-md-none bg-dark">
+              <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="true" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              </div>
+            </nav>
+            <div class="col-12 col-md-2 bg-primary">
+              <div class="collapse navbar-collapse show" id="navbarToggleExternalContent">
+                <ul>
+                  <li><a class="d-block" href="#" style="color: #fff; border: 1px solid #fff">10000</a></li>
+                  <li><a class="d-block" href="#" style="color: #fff; border: 1px solid #fff">20000</a></li>
+                  <li><a class="d-block" href="#" style="color: #fff; border: 1px solid #fff">30000</a></li>
+                </ul>
+              </div> -->
+          
+        </div>
+          <!-- Navbar Old -->
+          <!-- <nav class="navbar navbar-expand-md col-lg-2 col-md-3 pt-md-0 navbar-dark bg-primary">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sideBar">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -68,7 +117,7 @@
                 </li>
               </ul>
             </div>
-          </nav>
+          </nav> -->
     <!-- Main content -->
           <main class="col-lg-10 col-md-9">
             <div class="container">

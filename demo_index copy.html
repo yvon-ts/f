@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="datepicker/css/bootstrap-datepicker.min.css">
+    
+    <style type="text/css">
+    .box{
+      width: 100%;
+      background-color: #fff;
+    }
+    .cusBar{
+      height: 55px;
+    }
+    .cus-title{
+      font-size: 1.5rem;
+      line-height: 50px;
+      font-weight: bold;
+    }
+    .cus-title i{
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .form-box label{
+      line-height: 30px;
+      color: grey;
+    }
+    select{
+      background-color: #eee;
+      border: none;
+      outline: none;
+      height: 30px;
+      border: 2px solid #eee;
+      border-radius: .3rem;
+    }
+    .addr{
+      position: absolute;
+      right: 6rem;
+    }
+    #sideBar {
+        /* position: fixed; */
+        top: 66px;
+        bottom: 0;
+    }
+    </style>
+    <title>遠智證券 - 客戶資料管理系統</title>
+</head>
+<body>
+    <header class="sticky-top">
+        <div class="container-fluid d-flex justify-content-between">
+        <h1 class="logo"><a href="index.html">客戶資料管理系統</a></h1>
+    </div>
+    </header>
+    <div class="container-fluid">
+      <div class="row wrapper min-vh-100 flex-column flex-sm-row">
+          <aside class="col-12 col-lg-2 col-sm-3 p-0 bg-primary flex-shrink-1">
+              <nav class="navbar navbar-expand-sm navbar-dark bg-primary align-items-start flex-sm-column flex-row pt-2 pb-2 pt-sm-0 pb-sm-0">
+                  <a href class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".sidebar">
+                      <span class="navbar-toggler-icon"></span>
+                  </a>
+                  <div class="collapse navbar-collapse sidebar w-100">
+                      <ul class="flex-column navbar-nav w-100 justify-content-between">
+                          <li class="nav-item">
+                              <a class="nav-link pl-0 dropdown-toggle text-nowrap" href="#m1" data-bs-toggle="collapse" data-bs-target="#m1" aria-expanded="false">
+                                  <i class="fa fa-address-card-o fa-fw"></i> <span class="">基本資料</span>
+                              </a>
+                              <div class="collapse" id="m1">
+                                  <ul class="flex-column nav">
+                                      <a class="nav-link px-0 text-truncate" href="#">Sub</a>
+                                      <a class="nav-link px-0 text-truncate" href="#">Sub longer</a>
+                                  </ul>
+                              </div>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link pl-0" href="#"><i class="fa fa-book fa-fw"></i> <span class="">Link</span></a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link pl-0" href="#"><i class="fa fa-heart fa-fw"></i> <span class="">Link</span></a>
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
+          </aside>
+          <main class="col bg-faded py-3">
+            <div class="container">
+              <div class="box rounded-semi mt-4 ps-5 pe-5 pt-3 pb-3">
+                <!-- cusBar start -->
+                <div class="cusBar d-flex justify-content-end flex-nowrap justify-content-lg-between align-items-end border-bottom border-2 border-danger mt-xl-0 mt-md-4">
+                  <span class="cus-title ms-3"><i class="fas fa-user-alt me-3"></i>王小明</span>
+                  <ul class="cus-info d-flex flex-sm-wrap justify-content-end">
+                    <li class="ms-2"><span class="tag text-light pt-1 pb-1 ps-2 pe-2 rounded bg-warning">專投戶</span></li>
+                    <li class="ms-2"><span class="tag text-light pt-1 pb-1 ps-2 pe-2 rounded bg-danger">高風險</span></li>
+                    <li class="ms-2"><span class="tag text-light pt-1 pb-1 ps-2 pe-2 rounded bg-primary">員工戶</span></li>
+                    <li class="ms-3"><span class="title text-primary fw-bold">JNG帳號：</span>JNG106537</li>
+                    <li class="ms-3"><span class="title text-primary fw-bold">負責業務：</span>C0000 業務員</li>
+                  </ul>
+                </div>
+                <!-- Data group start -->
+                <form action="" class="form-box pb-5">
+                  <div class="row"><div class="col-md-12 ms-3 mt-4 mb-3"><span class="title text-primary fw-bold">帳戶狀態</span></div></div>
+                  <div class="row ms-4 me-4">
+                    <div class="col-md-2 border-top row-style"><label for="">帳戶類型</label></div>
+                  <div class="col-md-3 border-top row-style relative">
+                    <select name="" id="" class="w-100 absolute-right">
+                      <option value="受託買賣+財富管理 selected">受託買賣+財富管理</option>
+                      <option value="單開受託買賣">單開受託買賣</option>
+                      <option value="單開財富管理">單開財富管理</option>
+                    </select>
+                  </div>  
+                  <div class="col-md-4 border-top row-style"><label for="">最後異動日期</label></div>
+                    <div class="col-md-3 border-top row-style relative">
+                      <!-- Datepicker starts -->
+                        <div class="input-group date absolute-right" id="date">
+                          <input type="text" id="months" class="form-control" value="2021/08/01">
+                          <span class="input-group-addon input-group-text">
+                            <i class="fas fa-calendar"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- End of Datepicker -->
+                    <div class="col-md-3 border-top row-style"><label for="">關戶註記</label></div>
+                    <div class="col-md-2 border-top row-style pe-0">
+                      <div class="onoffswitch">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="auth-1" tabindex="0" checked>
+                        <label class="onoffswitch-label" for="auth-1">
+                            <span class="onoffswitch-inner"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-4 border-top row-style"><label for="">關戶日期</label></div>
+                    <div class="col-md-3 border-top row-style relative">
+                      <!-- Datepicker starts -->
+                        <div class="input-group date absolute-right" id="date">
+                          <input type="text" id="months" class="form-control" value="2021/08/01">
+                          <span class="input-group-addon input-group-text">
+                            <i class="fas fa-calendar"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <!-- End of Datepicker -->
+                      <div class="col-md-3 border-top row-style"><label for="">是否為專業投資人</label></div>
+                      <div class="col-md-2 border-top row-style pe-0">
+                        <div class="onoffswitch">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="auth-2" tabindex="0">
+                          <label class="onoffswitch-label" for="auth-2">
+                              <span class="onoffswitch-inner"></span>
+                              <span class="onoffswitch-switch"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 border-top row-style"><label for="">專業投資人紀錄</label></div>
+                      <div class="col-md-3 border-top row-style relative pe-0">
+                        <div class="onoffswitch" style="text-align: center;">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" tabindex="0">
+                          <label class="onoffswitch-label">
+                              <span class="onoffswitch-history"></span>
+                          </label>
+                        </div>
+                      </div>                    
+                      <div class="col-md-3 border-top row-style"><label for="">帳戶凍結</label></div>
+                      <div class="col-md-2 border-top row-style pe-0">
+                        <div class="onoffswitch">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="auth-3" tabindex="0">
+                          <label class="onoffswitch-label" for="auth-3">
+                              <span class="onoffswitch-inner"></span>
+                              <span class="onoffswitch-switch"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 border-top row-style"><label for="">帳戶凍結紀錄</label></div>
+                      <div class="col-md-3 border-top row-style relative pe-0">
+                        <!-- Datepicker starts -->
+                        <div class="input-group date absolute-right" id="date">
+                          <input type="text" id="months" class="form-control">
+                          <span class="input-group-addon input-group-text">
+                            <i class="fas fa-calendar"></i>
+                          </span>
+                        </div>
+                        <!-- End of Datepicker -->
+                      </div>
+                      <div class="col-md-3 border-top row-style"><label for="">禁止交易</label></div>
+                      <div class="col-md-2 border-top row-style pe-0">
+                        <div class="onoffswitch">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="auth-4" tabindex="0" checked>
+                          <label class="onoffswitch-label" for="auth-4">
+                              <span class="onoffswitch-inner"></span>
+                              <span class="onoffswitch-switch"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 border-top row-style"><label for="">禁止交易日期</label></div>
+                      <div class="col-md-3 border-top row-style relative">
+                        <!-- Datepicker starts -->
+                          <div class="input-group date absolute-right" id="date">
+                            <input type="text" id="months" class="form-control" value="2021/08/01">
+                            <span class="input-group-addon input-group-text">
+                              <i class="fas fa-calendar"></i>
+                            </span>
+                          </div>
+                        </div>
+                        <!-- End of Datepicker -->                
+                        <div class="col-md-2 row-style"><label for="">禁止交易備註</label></div>                      
+                        <div class="col-md-10 row-style relative"><input type="text" class="w-100 input-style absolute-right" value="備註blablablablabalablablablab">
+                        </div> 
+                  </div>
+                    <div class="row"><div class="col-md-12 ms-3 mt-4 mb-3"><span class="title text-primary fw-bold">商品風險預告</span></div></div>
+                    <div class="row ms-4 me-4">
+                      <div class="col-md-3 border-top row-style"><label for="">簽署TLAC風險預告書</label></div>
+                      <div class="col-md-2 border-top row-style pe-0">
+                        <div class="onoffswitch">
+                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="auth-5" tabindex="0">
+                          <label class="onoffswitch-label" for="auth-5">
+                              <span class="onoffswitch-inner"></span>
+                              <span class="onoffswitch-switch"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-md-4 border-top row-style"><label for="">TLAC風險預告書簽署日期</label></div>
+                      <div class="col-md-3 border-top row-style relative">
+                        <!-- Datepicker starts -->
+                          <div class="input-group date absolute-right" id="date">
+                            <input type="text" id="months" class="form-control">
+                            <span class="input-group-addon input-group-text">
+                              <i class="fas fa-calendar"></i>
+                            </span>
+                          </div>
+                        </div>
+                        <!-- End of Datepicker -->
+                        <div class="col-md-3 border-top row-style"><label for="">簽署零息債風險預告書</label></div>
+                        <div class="col-md-2 border-top row-style pe-0">
+                          <div class="onoffswitch">
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="auth-6" tabindex="0" checked>
+                            <label class="onoffswitch-label" for="auth-6">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-md-4 border-top row-style"><label for="">零息債風險預告書簽署日期</label></div>
+                        <div class="col-md-3 border-top row-style relative">
+                          <!-- Datepicker starts -->
+                            <div class="input-group date absolute-right" id="date">
+                              <input type="text" id="months" class="form-control" value="2021/08/01">
+                              <span class="input-group-addon input-group-text">
+                                <i class="fas fa-calendar"></i>
+                              </span>
+                            </div>
+                          </div>
+                          <!-- End of Datepicker -->                    
+                        </div>                    
+                    </form>
+                <!-- Data group end -->
+          </div>
+        </div>
+          </main>
+      </div>
+  </div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="datepicker/js/bootstrap-datepicker.js"></script>
+<script src="datepicker/js/bootstrap-datepicker.zh-TW.min.js"></script>
+<script>
+  $(function(){
+    $('#date').datepicker({
+      startView: 0,
+      minView: 0,
+      autoclose: 'true',
+      format: 'yyyy/mm/dd',
+      language: 'zh-TW'
+    });
+  });
+</script>
+</body>
+</html>
